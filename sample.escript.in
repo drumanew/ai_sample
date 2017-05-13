@@ -1,0 +1,8 @@
+#!/usr/bin/env escript
+%% -*- erlang -*-
+%%! @ebin_subst@
+
+main (Args) ->
+  io:format("~p~n", [Args]),
+  R = application:ensure_all_started(seresye),
+  io:format("~p~n", [R]).
